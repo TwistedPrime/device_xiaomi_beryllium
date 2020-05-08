@@ -10,8 +10,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/xiaomi/beryllium/beryllium-vendor.mk)
 
-# Firmware
-$(call inherit-product, vendor/xiaomi-firmware/beryllium/firmware.mk)
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2246
@@ -63,8 +61,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/qdcm_calib_data_ebbg_fhd_video_dsi_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_ebbg_fhd_video_dsi_panel.xml \
     $(LOCAL_PATH)/configs/qdcm_calib_data_tianma_fhd_video_dsi_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_tianma_fhd_video_dsi_panel.xml
 
-# GoogleCamera
-$(call inherit-product, packages/apps/GoogleCameraMod/xiaomi-sdm845/config.mk)
 
 # GPS
 PRODUCT_COPY_FILES += \
